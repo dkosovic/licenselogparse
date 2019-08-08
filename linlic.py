@@ -123,7 +123,7 @@ if __name__ == '__main__':
 # maxusage.
                   usage[product] = nlic
                   maxusage[product] = nlic
-               if args.d: print('out: ' + fields[1] + '.' + fields[3].strip('"') + ': ' + str(usage[product]))
+               if args.d: print(line_num, 'out: ' + fields[1] + '.' + fields[3].strip('"') + ': ' + str(usage[product]))
 
 
    l.close()
