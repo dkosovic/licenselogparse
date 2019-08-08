@@ -59,7 +59,7 @@ if __name__ == '__main__':
             if (fields[2] == LIC_IN):
 # Ansys's LM puts number of license in the sixth field.
                nlic = 1
-               if len(fields) == 7 and fields[2] == 'ansyslmd': nlic = int(fields[5].strip('('))
+               if len(fields) == 7: nlic = int(fields[5].strip('('))
 
                product = fields[1] + '.' + fields[3].strip('"')
 
@@ -97,7 +97,7 @@ if __name__ == '__main__':
             elif (fields[2] == LIC_OUT): 
 # Ansys's LM puts number of license in the sixth field.
                nlic = 1
-               if len(fields) == 7 and fields[2] == 'ansyslmd': nlic = int(fields[5].strip('('))
+               if len(fields) == 7: nlic = int(fields[5].strip('('))
 
                product = fields[1] + '.' + fields[3].strip('"')
 
