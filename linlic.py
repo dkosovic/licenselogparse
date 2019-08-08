@@ -50,6 +50,11 @@ if __name__ == '__main__':
          line_num = line_num+1
          fields = line.split()
 
+# Reset product usages with Startup/Restart or Reread of vendor daemon 
+         if "=== Startup/Restart Info ===" in line or "=== Reread Info ===" in line:
+            usage = usage.fromkeys(usage, 0)
+            if args.d: print(line_num, '=== Startup/Restart/Reread ===')
+         
 # Drop any lines with not enough fields to check.
          if len(fields) > 3 :
 # For the purposes of this script, a "product" is the (license mananger
